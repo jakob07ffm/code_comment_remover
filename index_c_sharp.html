@@ -32,6 +32,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-right: 10px; /* Add some space between buttons */
         }
         button:hover {
             background-color: #0056b3;
@@ -50,6 +51,7 @@
     <h1>Comment Remover</h1>
     <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
     <button onclick="removeComments()">Remove Comments</button>
+    <button onclick="copyToClipboard()">Copy</button>
     <div class="result" id="resultOutput"></div>
 
     <script>
@@ -65,6 +67,26 @@
 
             // Display the result in the resultOutput div
             document.getElementById('resultOutput').textContent = cleanedCode;
+        }
+
+        function copyToClipboard() {
+            // Get the text content from the resultOutput div
+            const resultOutput = document.getElementById('resultOutput').textContent;
+
+            // Create a temporary textarea element to hold the text to be copied
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = resultOutput;
+            document.body.appendChild(tempTextarea);
+
+            // Select the text and copy it to the clipboard
+            tempTextarea.select();
+            document.execCommand('copy');
+
+            // Remove the temporary textarea element from the document
+            document.body.removeChild(tempTextarea);
+
+            // Optionally, alert the user that the text has been copied
+            alert('Copied to clipboard!');
         }
     </script>
 </body>
