@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Side Menu Example</title>
+    <title>Comment Styles</title>
     <style>
         /* Basic reset */
         * {
@@ -13,53 +13,59 @@
         }
         /* Body styles */
         body {
-            font-family: Arial, sans-serif;
             display: flex;
-        }
-        /* Side menu styles */
-        .side-menu {
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            width: 250px;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        /* Main container styles */
+        .main-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            align-items: center;
         }
-        /* Menu button styles */
-        .side-menu a {
+        /* Title styles */
+        h1 {
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+        /* Container styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        /* Box styles */
+        .box {
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-decoration: none;
-            color: #fff;
-            padding: 10px;
-            background-color: #444;
-            border-radius: 4px;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             transition: background-color 0.3s ease;
         }
-        .side-menu a:hover {
-            background-color: #555;
-        }
-        /* Main content styles */
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
-            flex-grow: 1;
+        .box:hover {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
-    <div class="side-menu">
-        <a href="page1.html">Page 1</a>
-        <a href="page2.html">Page 2</a>
-        <a href="page3.html">Page 3</a>
-    </div>
-    <div class="main-content">
-        <!-- Main content goes here -->
-        <h1>Welcome to the Main Content Area</h1>
-        <p>Select a page from the menu to view content.</p>
+    <div class="main-container">
+        <h1>code_comment_remover</h1>
+        <div class="container">
+            <a href="index_python.html" class="box">Python "#"</a>
+            <a href="index_c_sharp.html" class="box">C# "///"</a>
+            <a href="index.html" class="box">Html "// & /**/"</a>
+        </div>
     </div>
 </body>
 </html>
