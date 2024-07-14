@@ -11,6 +11,11 @@
             padding: 0;
             box-sizing: border-box;
         }
+        /* Font-face rule to load custom font */
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('font.ttf') format('truetype');
+        }
         /* Body styles */
         body {
             display: flex;
@@ -18,43 +23,50 @@
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            font-family: 'CustomFont', Arial, sans-serif;
         }
         /* Main container styles */
         .main-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         /* Title styles */
         h1 {
             margin-bottom: 20px;
-            font-size: 40px;
+            font-size: 32px;
+            color: #333;
         }
         /* Container styles */
         .container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
         /* Box styles */
         .box {
-            background-color: #fff;
-            border: 2px solid #000;
-            border-radius: 20px;
-            padding: 20px;
-            width: 300px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            width: 250px;
             text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-decoration: none;
-            color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: background-color 0.3s ease;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .box:hover {
-            background-color: #f0f0f0;
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+        .box:active {
+            background-color: #3e8e41;
         }
     </style>
 </head>
@@ -62,9 +74,9 @@
     <div class="main-container">
         <h1>code_comment_remover</h1>
         <div class="container">
-            <a href="index_python.html" class="box">Python "#"</a>
-            <a href="index_c_sharp.html" class="box">C# "///"</a>
-            <a href="index.html" class="box">Html "// & /**/"</a>
+            <a href="index_python.html" class="box">Python ... "#"</a>
+            <a href="index_c_sharp.html" class="box">C# ... "///"</a>
+            <a href="index.html" class="box">Html ... "// & /**/"</a>
         </div>
     </div>
 </body>
